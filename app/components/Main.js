@@ -1,13 +1,13 @@
-const React = require('react');
+import React from 'react';
 
 const Main = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className='main-container'>
         {this.props.children}
       </div>
     );
-  }
+  },
 });
 
-module.exports = Main;
+export default Main;

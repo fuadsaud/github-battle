@@ -1,25 +1,34 @@
-const React = require('react');
+import React from 'react';
+import R from 'ramda';
 
-const ConfirmBattle = require('../components/ConfirmBattle');
+import GitHubHelpers from 'utils/GitHubHelpers';
+import ConfirmBattle from 'components/ConfirmBattle';
 
 const ConfirmBattleContainer = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: React.PropTypes.object.isRequired,
   },
   getInitialState: function() {
     return {
       isLoading: true,
-      playersInfo: []
+      playersInfo: [],
     };
   },
   componentDidMount: function() {
     const query = this.props.location.query;
 
-    console.log(query);
+    GitHubHelpers.getPlayersInfo(
+      R.pipe(R.pick(['playerOne', 'playerTwo']), R.values)(query)
+    ).then((players) => {
+      console.log(players);
+      this.setState({ isLoading: false, playersInfo: players, });
+    }).catch((error) => {
+      console.error(error);
+    });
   },
   render: function() {
     return (
-      <ConfirmBattle isLoading={this.state.isLoading} playersInfo={this.state.playersInfo}/>
+      <ConfirmBattle isLoading={this.state.isLoading} playersInfo={this.state.playersInfo} />
     );
   }
 });

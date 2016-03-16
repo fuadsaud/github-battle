@@ -17,6 +17,7 @@ const Prompt = function(props) {
               placeholder="GitHub Username"
               onChange={props.onUpdateUser}
               value={props.username}
+              autofocus
               type="text" />
           </div>
           <div className="form-group col-sm-4 col-sm-offset-4">

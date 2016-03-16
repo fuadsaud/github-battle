@@ -20,4 +20,10 @@ module.exports = {
     path: __dirname + '/dist',
   },
   plugins: [HTMLWebpackPluginConfig],
-};
+  resolve: {
+    alias: {
+      components: __dirname + '/app/components',
+      utils: __dirname + '/app/utils',
+    }
+  }
+}
