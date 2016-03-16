@@ -1,10 +1,9 @@
-const React = require('react');
-const ReactRouter = require('react-router');
-const transparentBg = require('../styles').transparentBg;
-const Link = ReactRouter.Link;
+import React from 'react';
+import ReactRouter, { Link } from 'react-router';
+import { trasparentBg } from 'styles/index';
 
 const Home = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className="jumbotron col-sm-12 text-center" style={transparentBg}>
         <h1>GitHub Battle</h1>
@@ -18,7 +17,7 @@ const Home = React.createClass({
         </Link>
       </div>
     );
-  }
+  },
 });
 
-module.exports = Home;
+export default Home;

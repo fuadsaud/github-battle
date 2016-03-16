@@ -23,6 +23,7 @@ module.exports = {
   resolve: {
     alias: {
       components: __dirname + '/app/components',
+      styles: __dirname + '/app/styles',
       utils: __dirname + '/app/utils',
     }
   }

@@ -1,7 +1,10 @@
 const styles = {
   transparentBg: {
-    background: 'transparent'
-  }
+    background: 'transparent',
+  },
+  space: {
+    margin: '25px',
+  },
 };
 
-module.exports = styles;
+export default styles;
