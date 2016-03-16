@@ -21,9 +21,7 @@ const ConfirmBattleContainer = React.createClass({
       R.pipe(R.pick(['playerOne', 'playerTwo']), R.values)(query)
     ).then((players) => {
       this.setState({ isLoading: false, playersInfo: players, });
-    }).catch((error) => {
-      console.error(error);
-    });
+    })
   },
   handleInitiateBattle() {
     this.context.router.push({
@@ -33,7 +31,7 @@ const ConfirmBattleContainer = React.createClass({
       }
     });
   },
-  render: function() {
+  render() {
     return (
       <ConfirmBattle
         onInitiateBattle={this.handleInitiateBattle}

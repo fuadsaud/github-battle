@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactRouter, { Link } from 'react-router';
-import { trasparentBg } from 'styles/index';
+
+import MainContainer from 'containers/MainContainer';
 
 const Home = React.createClass({
   render() {
     return (
-      <div className="jumbotron col-sm-12 text-center" style={transparentBg}>
+      <MainContainer>
         <h1>GitHub Battle</h1>
-
-        <p className="lead"></p>
 
         <Link to="/playerOne">
           <button className="btn btn-large btn-success" type="button">
             Get started!
           </button>
         </Link>
-      </div>
+      </MainContainer>
     );
   },
 });

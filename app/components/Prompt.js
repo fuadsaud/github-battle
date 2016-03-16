@@ -1,12 +1,10 @@
-const React = require('react');
-const PropTypes = React.PropTypes;
-const transparentBg = require('../styles').transparentBg;
+import React, { PropTypes } from 'react';
 
-const Prompt = function(props) {
+import { transparentBg } from 'styles/index';
+
+const Prompt = (props) => {
   return (
-    <div
-      className="jumbotron col-sm-6 col-sm-offset-3 text-center"
-      style={transparentBg}>
+    <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
       <h1>{props.header}</h1>
 
       <div className="col-sm-12">
@@ -20,6 +18,7 @@ const Prompt = function(props) {
               autofocus
               type="text" />
           </div>
+
           <div className="form-group col-sm-4 col-sm-offset-4">
             <button
               className="btn btn-block btn-success"
@@ -40,4 +39,4 @@ Prompt.propTypes = {
   username: PropTypes.string.isRequired
 };
 
-module.exports = Prompt;
+export default Prompt;
