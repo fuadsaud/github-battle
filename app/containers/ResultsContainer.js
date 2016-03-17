@@ -15,7 +15,7 @@ const ResultsContainer = React.createClass({
   },
   componentDidMount() {
     GitHubHelpers.battle(this.playersInfo()).then((scores) => {
-      console.log("SDFDSFDSFSDFDF")
+      console.log("ajax")
       this.setState({
         isLoading: false,
         scores: scores,

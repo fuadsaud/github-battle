@@ -1,4 +1,4 @@
-const styles = {
+export default {
   transparentBg: {
     background: 'transparent',
   },
@@ -6,5 +6,3 @@ const styles = {
     margin: '25px',
   },
 };
-
-export default styles;

@@ -6,7 +6,7 @@ import MainContainer from 'containers/MainContainer';
 import UserDetails from 'components/UserDetails';
 import UserDetailsWrapper from 'components/UserDetailsWrapper';
 
-const StarOver = (props) => {
+const StartOver = (props) => {
   return (
     <div className="col-sm-12" style={styles.space}>
       <Link to="/playerOne">
@@ -17,7 +17,6 @@ const StarOver = (props) => {
 }
 
 const Results = (props) => {
-  console.log('rr', props)
   if (props.isLoading === true) {
     console.log('tre')
     return <p>LOADING!</p>;
@@ -35,6 +34,7 @@ const Results = (props) => {
 
   const winningIndex = props.scores[0] > props.scores[1] ? 0 : 1;
   const losingIndex = winningIndex === 0 ? 1 : 0;
+  console.log('results', props)
 
   return (
     <MainContainer>
