@@ -5,10 +5,11 @@ import styles from 'styles/index';
 import MainContainer from 'containers/MainContainer';
 import UserDetails from 'components/UserDetails';
 import UserDetailsWrapper from 'components/UserDetailsWrapper';
+import Loading from 'components/Loading';
 
 const ConfirmBattle = (props) => {
   return props.isLoading === true
-    ? <p>LOADING!</p>
+    ? <Loading speed={800} text='Waiting' />
     : <MainContainer>
         <h1>Confirm Players</h1>
 

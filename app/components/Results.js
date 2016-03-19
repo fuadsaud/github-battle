@@ -5,6 +5,7 @@ import styles from 'styles/index';
 import MainContainer from 'containers/MainContainer';
 import UserDetails from 'components/UserDetails';
 import UserDetailsWrapper from 'components/UserDetailsWrapper';
+import Loading from 'components/Loading';
 
 const StartOver = (props) => {
   return (
@@ -19,7 +20,7 @@ const StartOver = (props) => {
 const Results = (props) => {
   if (props.isLoading === true) {
     console.log('tre')
-    return <p>LOADING!</p>;
+    return <Loading speed={100} text='One moment' />;
   }
 
   if (props.scores[0] === props.scores[1]) {
